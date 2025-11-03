@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Logo } from './Logo';
+import  Logo  from '/public/images/haseeb_logo.png';
 
 export function Header() {
   const location = useLocation();
@@ -21,11 +21,8 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <Logo className="w-10 h-10 transition-transform group-hover:scale-110" />
-            <span className="text-xl text-[#f8fafc] group-hover:text-[#38bdf8] transition-colors">
-              Muhammad<span className="text-[#38bdf8]">.</span>
-            </span>
+          <Link to="/" className="flex items-center gap-2 group brandLogo">           
+            <img src={Logo} alt="" />
           </Link>
 
           {/* Desktop Navigation */}

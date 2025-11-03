@@ -111,7 +111,7 @@ export function ProjectsPage() {
                 className={
                   activeFilter === filter
                     ? 'bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] text-white'
-                    : 'border-[#38bdf8]/30 text-[#38bdf8] hover:bg-[#38bdf8]/10'
+                    : 'border-[#38bdf8] text-[#38bdf8] hover:bg-[#38bdf8]/10 hover:text-[#38bdf8]'
                 }
               >
                 {filter}

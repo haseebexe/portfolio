@@ -187,3 +187,14 @@
 html {
   font-size: var(--font-size);
 }
+
+
+.brandLogo{
+  max-width: 80px;
+}
+
+@media (min-width:1200px) {
+  .brandLogo{
+  max-width: 120px;
+}
+}
