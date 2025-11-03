@@ -192,6 +192,9 @@ html {
 .brandLogo{
   max-width: 80px;
 }
+.aspect-16-8{
+  aspect-ratio: 16 / 8;
+}
 
 @media (min-width:1200px) {
   .brandLogo{

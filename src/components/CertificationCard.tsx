@@ -1,4 +1,5 @@
 import { Award, ExternalLink } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface CertificationCardProps {
   title: string;
@@ -7,6 +8,7 @@ interface CertificationCardProps {
   credentialId?: string;
   verificationUrl?: string;
   logo?: string;
+  certificateImage?: string;
   skills: string[];
 }
 
@@ -17,17 +19,39 @@ export function CertificationCard({
   credentialId,
   verificationUrl,
   logo,
+  certificateImage,
   skills,
 }: CertificationCardProps) {
   const CardContent = () => (
-    <div className="relative group bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-lg p-6 hover:border-[#38bdf8]/50 transition-all hover:shadow-lg hover:shadow-[#38bdf8]/20 overflow-hidden h-full">
+    <div className="relative group bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-lg overflow-hidden hover:border-[#38bdf8]/50 transition-all hover:shadow-lg hover:shadow-[#38bdf8]/20 h-full">
       {/* Background Glow Effect */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#38bdf8]/10 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="relative flex flex-col h-full">
-        {/* Header */}
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex items-start gap-4">
+        {/* Certificate Image */}
+        {certificateImage && (
+          <div className="relative w-full h-48 bg-white/5 overflow-hidden">
+            <ImageWithFallback
+              src={certificateImage}
+              alt={title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            {/* Overlay gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] to-transparent opacity-60"></div>
+            
+            {/* External Link Icon on Image */}
+            {verificationUrl && (
+              <div className="absolute top-3 right-3 p-2 bg-[#38bdf8] rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                <ExternalLink size={16} className="text-white" />
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Content */}
+        <div className="p-6 flex flex-col flex-1">
+          {/* Header */}
+          <div className="flex items-start gap-4 mb-4">
             {/* Logo or Icon */}
             {logo ? (
               <div className="w-12 h-12 rounded-lg bg-white/10 border border-white/10 overflow-hidden flex-shrink-0">
@@ -47,52 +71,45 @@ export function CertificationCard({
             </div>
           </div>
 
-          {/* External Link Icon */}
-          {verificationUrl && (
-            <div className="text-[#38bdf8] opacity-0 group-hover:opacity-100 transition-opacity">
-              <ExternalLink size={20} />
+          {/* Date and Credential */}
+          <div className="mb-4">
+            <div className="inline-block px-3 py-1 bg-[#38bdf8]/10 border border-[#38bdf8]/30 rounded-full mb-2">
+              <span className="text-[#38bdf8] text-xs">{date}</span>
             </div>
-          )}
-        </div>
-
-        {/* Date and Credential */}
-        <div className="mb-4">
-          <div className="inline-block px-3 py-1 bg-[#38bdf8]/10 border border-[#38bdf8]/30 rounded-full mb-2">
-            <span className="text-[#38bdf8] text-xs">{date}</span>
+            {credentialId && (
+              <p className="text-[#f8fafc]/50 text-xs mt-2">
+                Credential ID: {credentialId}
+              </p>
+            )}
           </div>
-          {credentialId && (
-            <p className="text-[#f8fafc]/50 text-xs mt-2">
-              Credential ID: {credentialId}
-            </p>
-          )}
-        </div>
 
-        {/* Skills */}
-        <div className="flex-1 flex flex-col justify-end">
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[#38bdf8] text-xs"
-              >
-                {skill}
-              </span>
-            ))}
+          {/* Skills */}
+          <div className="flex-1 flex flex-col justify-end">
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[#38bdf8] text-xs"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Verification Badge */}
-        {verificationUrl && (
-          <div className="mt-4 pt-4 border-t border-white/10">
-            <div className="flex items-center justify-between">
-              <span className="text-[#f8fafc]/70 text-xs">Click to verify</span>
-              <div className="flex items-center gap-1">
-                <span className="w-2 h-2 bg-[#38bdf8] rounded-full animate-pulse"></span>
-                <span className="text-[#38bdf8] text-xs">Verified</span>
+          {/* Verification Badge */}
+          {verificationUrl && (
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <div className="flex items-center justify-between">
+                <span className="text-[#f8fafc]/70 text-xs">Click to verify</span>
+                <div className="flex items-center gap-1">
+                  <span className="w-2 h-2 bg-[#38bdf8] rounded-full animate-pulse"></span>
+                  <span className="text-[#38bdf8] text-xs">Verified</span>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

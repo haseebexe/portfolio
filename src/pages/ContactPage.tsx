@@ -4,6 +4,8 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Label } from '../components/ui/label';
+import emailjs from 'emailjs-com';
+
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,6 +17,13 @@ export function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Thank you for your message! I will get back to you soon.');
+    console.log('Form Data:', formData);
+
+    emailjs.send("service_hiq1bkw", "template_dfql6vg", {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    }, "99Y-eJBahMOwm1PqX" )
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -28,20 +37,20 @@ export function ContactPage() {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/muhammadhaseeb',
-      href: 'https://github.com/muhammadhaseeb',
+      value: 'github.com/haseebexe',
+      href: 'https://github.com/haseebexe',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/muhammadhaseeb',
-      href: 'https://linkedin.com/in/muhammadhaseeb',
+      value: 'linkedin.com/in/muhammad-haseeb-364062283',
+      href: 'https://www.linkedin.com/in/muhammad-haseeb-364062283/',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Remote / Available Worldwide',
-      href: '#',
+      value: 'Lahore (Remote / Available Worldwide)',
+      href: '#!',
     },
   ];
 
@@ -110,7 +119,7 @@ export function ContactPage() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] text-white hover:opacity-90 transition-opacity"
+                  className="w-full bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] text-white hover:opacity-90 transition-opacity cursor-pointer "
                 >
                   <Send size={18} className="mr-2" />
                   Send Message
@@ -154,7 +163,7 @@ export function ContactPage() {
                 <h3 className="text-[#f8fafc] mb-4">Quick Links</h3>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://github.com/muhammadhaseeb"
+                    href="github.com/haseebexe"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 bg-[#38bdf8]/10 border border-[#38bdf8]/30 rounded-lg text-[#38bdf8] hover:bg-[#38bdf8]/20 transition-colors text-sm"
@@ -163,7 +172,7 @@ export function ContactPage() {
                     GitHub
                   </a>
                   <a
-                    href="https://linkedin.com/in/muhammadhaseeb"
+                    href="https://www.linkedin.com/in/muhammad-haseeb-364062283/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 bg-[#38bdf8]/10 border border-[#38bdf8]/30 rounded-lg text-[#38bdf8] hover:bg-[#38bdf8]/20 transition-colors text-sm"

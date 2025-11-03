@@ -9,8 +9,47 @@ import {
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { CertificationCard } from "../components/CertificationCard";
 import metaLogo from "/public/images/meta.png";
+import educativeLogo from "/public/images/educative.jpeg";
+import educativeCertificate from "/public/images/educativeCertificate.png";
+import reactBasic from "/public/images/reactBasic.jpeg";
+import reactAdvanced from "/public/images/reactAdvanced.jpeg";
 
 export function AboutPage() {
+  const certifications = [
+    {
+      title: "Learn HTML, CSS, and JavaScript",
+      issuer: "Educative",
+      date: "Mar 2025",
+      credentialId: "Bg5WvwFAMr61kXjYGFvw7v8g5kj5hy",
+      verificationUrl:
+        "https://www.educative.io/verify-certificate/Bg5WvwFAMr61kXjYGFvw7v8g5kj5hy",
+      logo: educativeLogo,
+      certificateImage: educativeCertificate,
+      skills: ["HTML5", "CCS3", "Javascript"],
+    },
+    {
+      title: "React Basics",
+      issuer: "Meta",
+      date: "Apr 2025",
+      credentialId: "ZFKJ7VG60ICB",
+      verificationUrl:
+        "https://www.coursera.org/account/accomplishments/verify/ZFKJ7VG60ICB?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+      logo: metaLogo,
+      certificateImage: reactBasic,
+      skills: ["React", "JavaScript", "State Management"],
+    },
+    {
+      title: "Advanced React",
+      issuer: "Meta",
+      date: "May 2025",
+      credentialId: "8WGVKKL6Z6BU",
+      verificationUrl:
+        "https://www.coursera.org/account/accomplishments/verify/8WGVKKL6Z6BU",
+      logo: metaLogo,
+      certificateImage: reactAdvanced,
+      skills: ["React", "JavaScript", "Hooks", "Context API", "Routing", "Rest API" ],
+    },
+  ];
   const experience = [
     {
       year: "2023 - Present",
@@ -59,6 +98,7 @@ export function AboutPage() {
     { name: "HTML5", category: "Frontend" },
     { name: "CSS3/SASS", category: "Frontend" },
     { name: "Tailwind CSS", category: "Styling" },
+    { name: "Bootstrap", category: "Styling" },
     { name: "WordPress", category: "CMS" },
     { name: "Git/GitHub", category: "Tools" },
     { name: "Figma", category: "Design" },
@@ -70,61 +110,6 @@ export function AboutPage() {
     { icon: Code2, label: "Projects Completed", value: "15+" },
     { icon: Target, label: "Client Satisfaction", value: "100%" },
     { icon: Users, label: "Developers Mentored", value: "5+" },
-  ];
-
-  const certifications = [
-    {
-      title: "Meta Front-End Developer Professional Certificate",
-      issuer: "Meta (Facebook)",
-      date: "Jan 2024",
-      credentialId: "ABC123XYZ789",
-      verificationUrl:
-        "https://coursera.org/verify/professional-cert/ABC123XYZ789",
-        logo: metaLogo ,
-      skills: ["React", "JavaScript", "HTML/CSS"],
-    },
-    {
-      title: "Advanced React",
-      issuer: "Meta via Coursera",
-      date: "Dec 2023",
-      credentialId: "DEF456UVW012",
-      verificationUrl: "https://coursera.org/verify/DEF456UVW012",
-      skills: ["React Hooks", "Context API", "Performance"],
-    },
-    {
-      title: "JavaScript Algorithms and Data Structures",
-      issuer: "freeCodeCamp",
-      date: "Oct 2023",
-      credentialId: "fcc-js-2023",
-      verificationUrl:
-        "https://freecodecamp.org/certification/username/javascript-algorithms-and-data-structures",
-      skills: ["JavaScript", "Algorithms", "ES6+"],
-    },
-    {
-      title: "Responsive Web Design",
-      issuer: "freeCodeCamp",
-      date: "Sep 2023",
-      credentialId: "fcc-rwd-2023",
-      verificationUrl:
-        "https://freecodecamp.org/certification/username/responsive-web-design",
-      skills: ["HTML5", "CSS3", "Flexbox", "Grid"],
-    },
-    {
-      title: "WordPress Theme Development",
-      issuer: "Udemy",
-      date: "Aug 2023",
-      credentialId: "UC-WP-THEME-2023",
-      verificationUrl: "https://udemy.com/certificate/UC-WP-THEME-2023",
-      skills: ["WordPress", "PHP", "Custom Themes"],
-    },
-    {
-      title: "Modern JavaScript: ES6+",
-      issuer: "Udemy",
-      date: "Jul 2023",
-      credentialId: "UC-JS-ES6-2023",
-      verificationUrl: "https://udemy.com/certificate/UC-JS-ES6-2023",
-      skills: ["ES6", "Async/Await", "Modules"],
-    },
   ];
 
   return (
@@ -284,7 +269,9 @@ export function AboutPage() {
                     </div>
                     <p className="text-[#f8fafc]/70 mb-4">{edu.description}</p>
                     <div>
-                      <p className="text-[#f8fafc]/70 text-sm mb-2">Key Achievements:</p>
+                      <p className="text-[#f8fafc]/70 text-sm mb-2">
+                        Key Achievements:
+                      </p>
                       <div className="flex flex-wrap gap-2">
                         {edu.achievements.map((achievement) => (
                           <span
@@ -359,7 +346,7 @@ export function AboutPage() {
                 <Award size={20} className="text-white" />
               </div>
               <p className="text-[#f8fafc]/70">
-                Built 30+ production-ready websites
+                Built 15+ production-ready websites
               </p>
             </div>
             <div className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-lg p-6 hover:border-[#38bdf8]/50 transition-all">
