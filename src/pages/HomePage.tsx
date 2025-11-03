@@ -3,6 +3,9 @@ import { Button } from "../components/ui/button";
 import { ProjectCard } from "../components/ProjectCard";
 import { Code, Palette, Zap, Layers, Github, Linkedin } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import alamBibi from '/public/images/alamBibiHome.png';
+import demoStore from '/public/images/demo_home.png';
+import kipsHome from '/public/images/publicationsHome.png';
 
 export function HomePage() {
   const skills = [
@@ -14,31 +17,28 @@ export function HomePage() {
 
   const featuredProjects = [
     {
-      title: "E-Commerce Dashboard",
+      title: "Alam Bibi Foundtation",
       description:
-        "Modern admin dashboard built with React and real-time analytics",
-      techStack: ["React", "TypeScript", "Tailwind CSS"],
-      liveUrl: "#",
-      image:
-        "https://images.unsplash.com/photo-1676792519027-7c42006d7b4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NjE4NTc3ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "A non-profit, non-political charitable organization focusing on social development, education, health & community empowerment.",
+      techStack: ["Next.js", "Javascript"],
+      liveUrl: "https://aalambibi.org/",
+      image: alamBibi,
     },
     {
-      title: "Portfolio Website",
+      title: "E-Commerce Demo Store",
       description:
-        "Responsive portfolio site with smooth animations and modern design",
-      techStack: ["React", "CSS3", "JavaScript"],
-      liveUrl: "#",
-      image:
-        "https://images.unsplash.com/photo-1758611971148-891783785fa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWFjdCUyMGRldmVsb3BtZW50JTIwd29ya3NwYWNlfGVufDF8fHx8MTc2MTg5NDY1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+        "A modern demo e-commerce storefront showcasing UI, responsiveness and front-end work.",
+      techStack: ["React.js", "JavaScript" ],
+      liveUrl: "https://haseebcode.online/",
+      image: demoStore,
     },
     {
-      title: "WordPress Custom Theme",
+      title: "Kips Publications",
       description:
-        "Fully customized WordPress theme with Gutenberg block support",
-      techStack: ["WordPress", "PHP", "JavaScript"],
-      liveUrl: "#",
-      image:
-        "https://images.unsplash.com/photo-1722596627369-a743837c7176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JkcHJlc3MlMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc2MTg5NDY1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+        "A major education-publisher in Pakistan providing study notes, exam prep books, and academic materials.",
+      techStack: ["React.js", "JavaScript"],
+      liveUrl: "https://kipspublications.com/",
+      image: kipsHome ,
     },
   ];
 
@@ -64,13 +64,12 @@ export function HomePage() {
                 Frontend Developer
                 <br />
                 <span className="bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] bg-clip-text text-transparent">
-                  & Creative Coder
+                  Bridging design and functionality
                 </span>
               </h1>
               <p className="text-xl text-[#f8fafc]/70 mb-8">
                 Hi, I'm <span className="text-[#38bdf8]">Muhammad Haseeb</span>.
-                I transform ideas into exceptional digital experiences using
-                React.js.
+              I craft exceptional digital experiences by transforming ideas into reality with modern frontend technologies.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <Link to="/projects">
@@ -90,7 +89,7 @@ export function HomePage() {
               {/* Social Links */}
               <div className="flex items-center gap-4">
                 <a
-                  href="https://github.com/muhammadhaseeb"
+                  href="https://github.com/haseebexe"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#f8fafc]/60 hover:text-[#38bdf8] transition-colors"
@@ -98,7 +97,7 @@ export function HomePage() {
                   <Github size={20} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/muhammadhaseeb"
+                  href="https://www.linkedin.com/in/muhammad-haseeb-364062283/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#f8fafc]/60 hover:text-[#38bdf8] transition-colors"
@@ -111,11 +110,12 @@ export function HomePage() {
             {/* Right Content - Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-[#38bdf8]/50 transition-all">
-                <div className="text-[#38bdf8] mb-2">4+</div>
+                <div className="text-[#38bdf8] mb-2">2+</div>
                 <p className="text-[#f8fafc]/70 text-sm">Years Experience</p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-[#38bdf8]/50 transition-all">
-                <div className="text-[#38bdf8] mb-2">30+</div>
+                <div className="text-[#38bdf8] mb-2">
+                15+</div>
                 <p className="text-[#f8fafc]/70 text-sm">Projects Completed</p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-[#38bdf8]/50 transition-all">
@@ -185,7 +185,7 @@ export function HomePage() {
                 </div>
 
                 {/* Stats Row */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                   <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center hover:border-[#38bdf8]/50 transition-all">
                     <div className="text-[#38bdf8] mb-1">4+</div>
                     <p className="text-[#f8fafc]/60 text-xs">Years</p>
@@ -202,7 +202,7 @@ export function HomePage() {
                     <div className="text-[#38bdf8] mb-1">100%</div>
                     <p className="text-[#f8fafc]/60 text-xs">Satisfaction</p>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Skills Tags */}
                 <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -248,7 +248,7 @@ export function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-[#f8fafc] mb-4">Featured Projects</h2>
             <p className="text-[#f8fafc]/70 max-w-2xl mx-auto">
-              A selection of my recent work showcasing expertise in React,
+              A selection of my recent work showcasing expertise in React, Next,
               WordPress, and modern web development.
             </p>
           </div>

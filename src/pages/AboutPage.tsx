@@ -1,104 +1,129 @@
-import { Briefcase, GraduationCap, Award, Code2, Target, Users } from 'lucide-react';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { CertificationCard } from '../components/CertificationCard';
+import {
+  Briefcase,
+  GraduationCap,
+  Award,
+  Code2,
+  Target,
+  Users,
+} from "lucide-react";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { CertificationCard } from "../components/CertificationCard";
+import metaLogo from "/public/images/meta.png";
 
 export function AboutPage() {
   const experience = [
     {
-      year: '2023 - Present',
-      title: 'Senior Frontend Developer',
-      company: 'Tech Solutions Inc.',
-      description: 'Leading frontend development for enterprise web applications using React and modern JavaScript. Architecting scalable solutions and mentoring junior developers.',
-      skills: ['React.js', 'TypeScript', 'Team Leadership'],
+      year: "2023 - Present",
+      title: "Frontend Developer",
+      company: "Crunch Craft",
+      description:
+        "Leading frontend development for enterprise web applications using React and modern JavaScript. Architecting scalable solutions and mentoring junior developers.",
+      skills: [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Javascript",
+        "UI/UX",
+        "Wordpress",
+      ],
     },
-    {
-      year: '2021 - 2023',
-      title: 'Frontend Developer',
-      company: 'Digital Agency',
-      description: 'Developed custom WordPress themes and React applications for various clients. Collaborated with designers and backend teams to deliver pixel-perfect implementations.',
-      skills: ['WordPress', 'React', 'Client Management'],
-    },
+    // {
+    //   year: '2021 - 2023',
+    //   title: 'Frontend Developer',
+    //   company: 'Digital Agency',
+    //   description: 'Developed custom WordPress themes and React applications for various clients. Collaborated with designers and backend teams to deliver pixel-perfect implementations.',
+    //   skills: ['WordPress', 'React', 'Client Management'],
+    // },
   ];
 
   const education = [
     {
-      year: '2017 - 2021',
-      degree: 'Bachelor of Computer Science',
-      institution: 'University of Technology',
-      description: 'Focused on web technologies, software engineering, and user experience design. Graduated with honors.',
-      achievements: ['Dean\'s List', 'Web Development Award', 'Capstone Project Excellence'],
+      year: "Present",
+      degree: "Bachelor of Business & Information Technology (BBIT)",
+      institution: "Virtual University of Pakistan",
+      description: `Currently pursuing my BBIT degree with a strong focus on web technologies, software engineering, and user experience design. 
+  This program is helping me strengthen both my technical and analytical skills, bridging the gap between business and technology.`,
+      achievements: [
+        "Frontend Project Distinction",
+        "Top Grades in Web Development",
+        "E-Commerce Website Capstone",
+      ],
     },
   ];
 
   const tools = [
-    { name: 'React.js', category: 'Frontend' },
-    { name: 'Next.js', category: 'Frontend' },
-    { name: 'TypeScript', category: 'Language' },
-    { name: 'JavaScript (ES6+)', category: 'Language' },
-    { name: 'HTML5', category: 'Frontend' },
-    { name: 'CSS3/SASS', category: 'Frontend' },
-    { name: 'Tailwind CSS', category: 'Styling' },
-    { name: 'WordPress', category: 'CMS' },
-    { name: 'Git/GitHub', category: 'Tools' },
-    { name: 'Figma', category: 'Design' },
-    { name: 'REST APIs', category: 'Backend' },
-    { name: 'Responsive Design', category: 'Design' },
+    { name: "React.js", category: "Frontend" },
+    { name: "Next.js", category: "Frontend" },
+    { name: "TypeScript", category: "Language" },
+    { name: "JavaScript (ES6+)", category: "Language" },
+    { name: "HTML5", category: "Frontend" },
+    { name: "CSS3/SASS", category: "Frontend" },
+    { name: "Tailwind CSS", category: "Styling" },
+    { name: "WordPress", category: "CMS" },
+    { name: "Git/GitHub", category: "Tools" },
+    { name: "Figma", category: "Design" },
+    { name: "REST APIs", category: "Backend" },
+    { name: "Responsive Design", category: "Design" },
   ];
 
   const stats = [
-    { icon: Code2, label: 'Projects Completed', value: '30+' },
-    { icon: Target, label: 'Client Satisfaction', value: '100%' },
-    { icon: Users, label: 'Developers Mentored', value: '5+' },
+    { icon: Code2, label: "Projects Completed", value: "15+" },
+    { icon: Target, label: "Client Satisfaction", value: "100%" },
+    { icon: Users, label: "Developers Mentored", value: "5+" },
   ];
 
   const certifications = [
     {
-      title: 'Meta Front-End Developer Professional Certificate',
-      issuer: 'Meta (Facebook)',
-      date: 'Jan 2024',
-      credentialId: 'ABC123XYZ789',
-      verificationUrl: 'https://coursera.org/verify/professional-cert/ABC123XYZ789',
-      skills: ['React', 'JavaScript', 'HTML/CSS'],
+      title: "Meta Front-End Developer Professional Certificate",
+      issuer: "Meta (Facebook)",
+      date: "Jan 2024",
+      credentialId: "ABC123XYZ789",
+      verificationUrl:
+        "https://coursera.org/verify/professional-cert/ABC123XYZ789",
+        logo: metaLogo ,
+      skills: ["React", "JavaScript", "HTML/CSS"],
     },
     {
-      title: 'Advanced React',
-      issuer: 'Meta via Coursera',
-      date: 'Dec 2023',
-      credentialId: 'DEF456UVW012',
-      verificationUrl: 'https://coursera.org/verify/DEF456UVW012',
-      skills: ['React Hooks', 'Context API', 'Performance'],
+      title: "Advanced React",
+      issuer: "Meta via Coursera",
+      date: "Dec 2023",
+      credentialId: "DEF456UVW012",
+      verificationUrl: "https://coursera.org/verify/DEF456UVW012",
+      skills: ["React Hooks", "Context API", "Performance"],
     },
     {
-      title: 'JavaScript Algorithms and Data Structures',
-      issuer: 'freeCodeCamp',
-      date: 'Oct 2023',
-      credentialId: 'fcc-js-2023',
-      verificationUrl: 'https://freecodecamp.org/certification/username/javascript-algorithms-and-data-structures',
-      skills: ['JavaScript', 'Algorithms', 'ES6+'],
+      title: "JavaScript Algorithms and Data Structures",
+      issuer: "freeCodeCamp",
+      date: "Oct 2023",
+      credentialId: "fcc-js-2023",
+      verificationUrl:
+        "https://freecodecamp.org/certification/username/javascript-algorithms-and-data-structures",
+      skills: ["JavaScript", "Algorithms", "ES6+"],
     },
     {
-      title: 'Responsive Web Design',
-      issuer: 'freeCodeCamp',
-      date: 'Sep 2023',
-      credentialId: 'fcc-rwd-2023',
-      verificationUrl: 'https://freecodecamp.org/certification/username/responsive-web-design',
-      skills: ['HTML5', 'CSS3', 'Flexbox', 'Grid'],
+      title: "Responsive Web Design",
+      issuer: "freeCodeCamp",
+      date: "Sep 2023",
+      credentialId: "fcc-rwd-2023",
+      verificationUrl:
+        "https://freecodecamp.org/certification/username/responsive-web-design",
+      skills: ["HTML5", "CSS3", "Flexbox", "Grid"],
     },
     {
-      title: 'WordPress Theme Development',
-      issuer: 'Udemy',
-      date: 'Aug 2023',
-      credentialId: 'UC-WP-THEME-2023',
-      verificationUrl: 'https://udemy.com/certificate/UC-WP-THEME-2023',
-      skills: ['WordPress', 'PHP', 'Custom Themes'],
+      title: "WordPress Theme Development",
+      issuer: "Udemy",
+      date: "Aug 2023",
+      credentialId: "UC-WP-THEME-2023",
+      verificationUrl: "https://udemy.com/certificate/UC-WP-THEME-2023",
+      skills: ["WordPress", "PHP", "Custom Themes"],
     },
     {
-      title: 'Modern JavaScript: ES6+',
-      issuer: 'Udemy',
-      date: 'Jul 2023',
-      credentialId: 'UC-JS-ES6-2023',
-      verificationUrl: 'https://udemy.com/certificate/UC-JS-ES6-2023',
-      skills: ['ES6', 'Async/Await', 'Modules'],
+      title: "Modern JavaScript: ES6+",
+      issuer: "Udemy",
+      date: "Jul 2023",
+      credentialId: "UC-JS-ES6-2023",
+      verificationUrl: "https://udemy.com/certificate/UC-JS-ES6-2023",
+      skills: ["ES6", "Async/Await", "Modules"],
     },
   ];
 
@@ -110,7 +135,8 @@ export function AboutPage() {
           <div className="text-center mb-12">
             <h1 className="text-[#f8fafc] mb-4">About Me</h1>
             <p className="text-[#f8fafc]/70 max-w-2xl mx-auto">
-              Passionate Frontend Developer crafting exceptional digital experiences
+              Passionate Frontend Developer crafting exceptional digital
+              experiences
             </p>
           </div>
 
@@ -130,16 +156,23 @@ export function AboutPage() {
               <div className="md:col-span-2">
                 <h2 className="text-[#f8fafc] mb-4">Muhammad Haseeb</h2>
                 <p className="text-[#f8fafc]/70 mb-4">
-                  I'm a Frontend Developer with over 4 years of experience in creating beautiful, functional web experiences. 
-                  My journey in web development started with a curiosity about how websites work and evolved into a career I truly love.
+                  I'm a Frontend Developer who loves turning ideas into clean,
+                  responsive, and functional web experiences. What started as
+                  curiosity about how websites work has now become something I
+                  truly enjoy doing every day.
                 </p>
                 <p className="text-[#f8fafc]/70 mb-4">
-                  I specialize in React.js development and custom WordPress theme creation. My approach combines technical 
-                  expertise with creative problem-solving to deliver solutions that not only meet requirements but exceed expectations.
+                  I work mainly with{" "}
+                  <span className="text-[#38bdf8]">React.js</span> and{" "}
+                  <span className="text-[#38bdf8]">Next.js</span>, building
+                  modern SPAs with a focus on performance and simplicity. I also
+                  create custom WordPress themes when projects call for it. I
+                  like keeping my code neat and my designs easy to use.
                 </p>
                 <p className="text-[#f8fafc]/70">
-                  When I'm not coding, you'll find me exploring new web technologies, contributing to open-source projects, 
-                  or sharing knowledge with the developer community.
+                  Outside of work, I’m usually exploring new frontend tools,
+                  experimenting with design ideas, or helping other devs learn
+                  something new.
                 </p>
               </div>
             </div>
@@ -178,7 +211,7 @@ export function AboutPage() {
               >
                 {/* Background Accent */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#38bdf8]/10 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 <div className="relative flex flex-col md:flex-row md:items-start gap-6">
                   {/* Icon and Year */}
                   <div className="flex-shrink-0">
@@ -231,7 +264,7 @@ export function AboutPage() {
               >
                 {/* Background Accent */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#38bdf8]/10 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 <div className="relative flex flex-col md:flex-row md:items-start gap-6">
                   {/* Icon and Year */}
                   <div className="flex-shrink-0">
@@ -246,7 +279,9 @@ export function AboutPage() {
                   {/* Content */}
                   <div className="flex-1">
                     <h3 className="text-[#f8fafc] mb-2">{edu.degree}</h3>
-                    <div className="text-[#f8fafc]/60 mb-4">{edu.institution}</div>
+                    <div className="text-[#f8fafc]/60 mb-4">
+                      {edu.institution}
+                    </div>
                     <p className="text-[#f8fafc]/70 mb-4">{edu.description}</p>
                     <div>
                       <p className="text-[#f8fafc]/70 text-sm mb-2">Key Achievements:</p>
@@ -323,13 +358,17 @@ export function AboutPage() {
               <div className="mt-1 p-2 bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-full flex-shrink-0">
                 <Award size={20} className="text-white" />
               </div>
-              <p className="text-[#f8fafc]/70">Built 30+ production-ready websites</p>
+              <p className="text-[#f8fafc]/70">
+                Built 30+ production-ready websites
+              </p>
             </div>
             <div className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-lg p-6 hover:border-[#38bdf8]/50 transition-all">
               <div className="mt-1 p-2 bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-full flex-shrink-0">
                 <Award size={20} className="text-white" />
               </div>
-              <p className="text-[#f8fafc]/70">Contributed to open-source React libraries</p>
+              <p className="text-[#f8fafc]/70">
+                Contributed to open-source React libraries
+              </p>
             </div>
             <div className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-lg p-6 hover:border-[#38bdf8]/50 transition-all">
               <div className="mt-1 p-2 bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-full flex-shrink-0">
@@ -341,7 +380,9 @@ export function AboutPage() {
               <div className="mt-1 p-2 bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-full flex-shrink-0">
                 <Award size={20} className="text-white" />
               </div>
-              <p className="text-[#f8fafc]/70">Improved page load times by 40% through optimization</p>
+              <p className="text-[#f8fafc]/70">
+                Improved page load times by 40% through optimization
+              </p>
             </div>
           </div>
         </div>
