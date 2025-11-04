@@ -1,90 +1,95 @@
-import { useState } from 'react';
-import { ProjectCard } from '../components/ProjectCard';
-import { Button } from '../components/ui/button';
+import { useState } from "react";
+import { ProjectCard } from "../components/ProjectCard";
+import { Button } from "../components/ui/button";
+import alamBibi from "/public/images/alamBibiHome.png";
+import demoStore from "/public/images/demo_home.png";
+import kipsHome from "/public/images/publicationsHome.png";
+import qbfnHome from "/public/images/qbfnHome.png";
+import collegeHome from "/public/images/collegeHome.png";
+import sevenCsHome from "/public/images/7csHome.png";
+import learnigoHome from "/public/images/learnigoHome.png";
+import prepHome from "/public/images/prepHome.png";
 
 export function ProjectsPage() {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState("All");
 
-  const filters = ['All', 'React', 'WordPress', 'HTML/CSS'];
+  const filters = ["All", "React", "Next", "WordPress"];
 
   const projects = [
     {
-      title: 'E-Commerce Dashboard',
-      description: 'Modern admin dashboard built with React and real-time analytics. Features include inventory management, sales tracking, and customer insights.',
-      techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Chart.js'],
-      liveUrl: 'https://example.com',
-      image: 'https://images.unsplash.com/photo-1676792519027-7c42006d7b4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NjE4NTc3ODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'React',
+      title: "Alam Bibi Foundtation",
+      description:
+        "Non-profit foundation website showcasing social development and community empowerment efforts.",
+      techStack: ["Next.js", "Javascript"],
+      liveUrl: "https://aalambibi.org/",
+      image: alamBibi,
+      category: "Next",
     },
     {
-      title: 'Portfolio Website',
-      description: 'Responsive portfolio site with smooth animations and modern design. Built with pure HTML, CSS, and JavaScript for optimal performance.',
-      techStack: ['HTML5', 'CSS3', 'JavaScript', 'GSAP'],
-      liveUrl: 'https://example.com',
-      image: 'https://images.unsplash.com/photo-1758611971148-891783785fa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWFjdCUyMGRldmVsb3BtZW50JTIwd29ya3NwYWNlfGVufDF8fHx8MTc2MTg5NDY1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'HTML/CSS',
+      title: "Demo Store",
+      description:
+        "A modern demo e-commerce storefront showcasing UI, responsiveness and front-end work.",
+      techStack: ["React.js", "JavaScript"],
+      liveUrl: "https://haseebcode.online/",
+      image: demoStore,
+      category: "React",
     },
     {
-      title: 'WordPress Custom Theme',
-      description: 'Fully customized WordPress theme with Gutenberg block support. Includes custom post types, ACF integration, and WooCommerce compatibility.',
-      techStack: ['WordPress', 'PHP', 'JavaScript', 'ACF'],
-      liveUrl: 'https://example.com',
-      image: 'https://images.unsplash.com/photo-1722596627369-a743837c7176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JkcHJlc3MlMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc2MTg5NDY1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'WordPress',
+      title: "Kips Publications",
+      description:
+        "A major education-publisher in Pakistan providing study notes, exam prep books, and academic materials.",
+      techStack: ["React.js", "JavaScript"],
+      liveUrl: "https://kipspublications.com/",
+      image: kipsHome,
+      category: "React",
     },
     {
-      title: 'Social Media App',
-      description: 'Full-featured social media application with real-time messaging, post sharing, and user profiles built with React and Firebase.',
-      techStack: ['React', 'Firebase', 'Material-UI', 'Redux'],
-      liveUrl: 'https://example.com',
-      image: 'https://images.unsplash.com/photo-1676792519027-7c42006d7b4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NjE4NTc3ODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'React',
+      title: "Kips Prep",
+      description: "lorem impsum dolor sit amet lorem impsum dolor sit amet",
+      techStack: ["WordPress Custom theme", "ACF", "CMS", "HTML/CSS"],
+      liveUrl: "https://kipsprep.com/",
+      image: prepHome,
+      category: "WordPress",
     },
-    {
-      title: 'Landing Page Template',
-      description: 'Conversion-optimized landing page template with responsive design and smooth scroll animations. Perfect for product launches.',
-      techStack: ['HTML5', 'CSS3', 'JavaScript'],
-      liveUrl: 'https://example.com',
-      image: 'https://images.unsplash.com/photo-1758611971148-891783785fa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWFjdCUyMGRldmVsb3BtZW50JTIwd29ya3NwYWNlfGVufDF8fHx8MTc2MTg5NDY1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'HTML/CSS',
+       {
+      title: "Kips College",
+      description: "lorem impsum dolor sit amet lorem impsum dolor sit amet",
+      techStack: ["WordPress Custom theme", "ACF", "CMS", "HTML/CSS"],
+      liveUrl: "https://kipscolleges.com/",
+      image: collegeHome,
+      category: "WordPress",
     },
-    {
-      title: 'Business Website',
-      description: 'Corporate WordPress website with custom page builder, SEO optimization, and contact form integrations.',
-      techStack: ['WordPress', 'PHP', 'Elementor', 'SEO'],
-      liveUrl: 'https://example.com',
-      image: 'https://images.unsplash.com/photo-1722596627369-a743837c7176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JkcHJlc3MlMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc2MTg5NDY1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'WordPress',
+       {
+      title: "Learnigo",
+      description: "lorem impsum dolor sit amet lorem impsum dolor sit amet",
+      techStack: ["WordPress Custom theme", "ACF", "CMS", "HTML/CSS"],
+      liveUrl: "https://learnigo.org/",
+      image: learnigoHome,
+      category: "WordPress",
     },
-    {
-      title: 'Task Management App',
-      description: 'Kanban-style task management application with drag-and-drop functionality, team collaboration, and deadline tracking.',
-      techStack: ['React', 'TypeScript', 'DnD Kit', 'Tailwind'],
-      liveUrl: 'https://example.com',
-      image: 'https://images.unsplash.com/photo-1676792519027-7c42006d7b4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NjE4NTc3ODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'React',
+       {
+      title: "7cs School",
+      description: "lorem impsum dolor sit amet lorem impsum dolor sit amet",
+      techStack: ["WordPress Custom theme", "ACF", "CMS", "HTML/CSS"],
+      liveUrl: "https://7csschool.com/",
+      image: sevenCsHome,
+      category: "WordPress",
     },
-    {
-      title: 'Restaurant Website',
-      description: 'Interactive restaurant website with online menu, reservation system, and image gallery. Fully responsive and optimized.',
-      techStack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
-      liveUrl: 'https://example.com',
-      image: 'https://images.unsplash.com/photo-1758611971148-891783785fa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWFjdCUyMGRldmVsb3BtZW50JTIwd29ya3NwYWNlfGVufDF8fHx8MTc2MTg5NDY1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'HTML/CSS',
+       {
+      title: "QBFN",
+      description: "lorem impsum dolor sit amet lorem impsum dolor sit amet",
+       techStack: ["WordPress Custom theme", "ACF", "CMS", "HTML/CSS"],
+      liveUrl: "https://qb-franchising.com/",
+      image: qbfnHome,
+      category: "WordPress",
     },
-    {
-      title: 'Blog Platform',
-      description: 'Custom WordPress blog platform with advanced filtering, social sharing, and newsletter integration.',
-      techStack: ['WordPress', 'PHP', 'JavaScript', 'MailChimp'],
-      liveUrl: 'https://example.com',
-      image: 'https://images.unsplash.com/photo-1722596627369-a743837c7176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JkcHJlc3MlMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc2MTg5NDY1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-      category: 'WordPress',
-    },
+
   ];
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter);
 
   return (
     <div className="min-h-screen pt-24 pb-20">
@@ -93,8 +98,9 @@ export function ProjectsPage() {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-[#f8fafc] mb-4">My Projects</h1>
           <p className="text-[#f8fafc]/70 max-w-2xl mx-auto">
-            A collection of web applications and websites I've built using modern technologies. 
-            Each project demonstrates different skills and approaches to problem-solving.
+            A collection of web applications and websites I've built using
+            modern technologies. Each project demonstrates different skills and
+            approaches to problem-solving.
           </p>
         </div>
       </section>
@@ -107,11 +113,11 @@ export function ProjectsPage() {
               <Button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                variant={activeFilter === filter ? 'default' : 'outline'}
+                variant={activeFilter === filter ? "default" : "outline"}
                 className={
                   activeFilter === filter
-                    ? 'bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] text-white'
-                    : 'border-[#38bdf8] text-[#38bdf8] hover:bg-[#38bdf8]/10 hover:text-[#38bdf8]'
+                    ? "bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] text-white cursor-pointer "
+                    : "border-[#38bdf8] text-[#38bdf8] hover:bg-[#38bdf8]/10 hover:text-[#38bdf8] cursor-pointer "
                 }
               >
                 {filter}
@@ -131,7 +137,9 @@ export function ProjectsPage() {
           </div>
           {filteredProjects.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-[#f8fafc]/60">No projects found in this category.</p>
+              <p className="text-[#f8fafc]/60">
+                No projects found in this category.
+              </p>
             </div>
           )}
         </div>

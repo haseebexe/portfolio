@@ -14,63 +14,6 @@ export function ContactPage() {
     message: "",
   });
 
-//   const handleSubmit = async (e: React.FormEvent) => {
-//     e.preventDefault();
-
-//     const loadingToast = toast.loading("Sending your message...");
-
-//     try {
-//       await emailjs.send(
-//         "service_hiq1bkw",
-//         "template_dfql6vg",
-//         {
-//           from_name: formData.name,
-//           from_email: formData.email,
-//           message: formData.message,
-//         },
-//         "99Y-eJBahMOwm1PqX"
-//       );
-
-//       toast.update(loadingToast, {
-//         render: "Thank you for your message! I will get back to you soon.",
-//         type: "success",
-//         isLoading: false,
-//         autoClose: 3000,
-//       });
-
-//       setFormData({ name: "", email: "", message: "" });
-//     } catch (error) {
-//       // toast.error("Oops! Something went wrong. Please try again later.");
-//       toast.update(loadingToast, {
-//         render: "Oops! Something went wrong. Please try again later.",
-//         type: "error",
-//         isLoading: false,
-//         autoClose: 3000,
-//       });
-//     }
-//   };
-
-// useEffect(() => {
-//   (window as any).onSubmit = function () {
-//     const form = document.querySelector("form");
-//     if (form) {
-//       // Find React's synthetic handler and call submit manually
-//       form.requestSubmit?.(); // modern browsers
-//     }
-//   };
-// }, []);
-
-
-useEffect(() => {
-  // Safely attach callback to window for reCAPTCHA
-  (window as any).handleReCAPTCHASubmit = async () => {
-    const form = document.querySelector("form");
-    if (form) {
-      form.requestSubmit?.(); // triggers React’s handleSubmit
-    }
-  };
-}, []);
-
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   const loadingToast = toast.loading("Sending your message...");
