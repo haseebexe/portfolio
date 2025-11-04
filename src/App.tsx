@@ -5,9 +5,12 @@ import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ContactPage } from './pages/ContactPage';
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
   return (
+    <>
+    <ToastContainer position="top-right" autoClose={2000}   />
     <Router>
       <div className="min-h-screen bg-[#0f172a] text-[#f8fafc]">
         <Header />
@@ -23,5 +26,6 @@ export default function App() {
         <Footer />
       </div>
     </Router>
+    </>
   );
 }

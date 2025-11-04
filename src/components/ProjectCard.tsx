@@ -11,6 +11,9 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, techStack, liveUrl, image }: ProjectCardProps) {
   return (
+    <a   href={liveUrl}
+          target="_blank"
+          rel="noopener noreferrer">
     <div className="group bg-white/5 rounded-lg overflow-hidden border border-white/10 hover:border-[#38bdf8]/50 transition-all hover:shadow-lg hover:shadow-[#38bdf8]/20 hover:-translate-y-1">
       {/* Project Image */}
       <div className="aspect-16-8 overflow-hidden bg-white/5">
@@ -51,5 +54,6 @@ export function ProjectCard({ title, description, techStack, liveUrl, image }: P
         </a>
       </div>
     </div>
+    </a>
   );
 }

@@ -19,13 +19,13 @@ export function HomePage() {
     {
       title: "Alam Bibi Foundtation",
       description:
-        "A non-profit, non-political charitable organization focusing on social development, education, health & community empowerment.",
+        "Non-profit foundation website showcasing social development and community empowerment efforts.",
       techStack: ["Next.js", "Javascript"],
       liveUrl: "https://aalambibi.org/",
       image: alamBibi,
     },
     {
-      title: "E-Commerce Demo Store",
+      title: "Demo Store",
       description:
         "A modern demo e-commerce storefront showcasing UI, responsiveness and front-end work.",
       techStack: ["React.js", "JavaScript" ],
@@ -261,7 +261,7 @@ export function HomePage() {
             <Link to="/projects">
               <Button
                 variant="outline"
-                className="border-[#38bdf8] text-[#38bdf8] hover:bg-[#38bdf8]/10 hover:text-[#38bdf8]"
+                className="border-[#38bdf8] text-[#38bdf8] hover:bg-[#38bdf8]/10 hover:text-[#38bdf8] cursor-pointer"
               >
                 View All Projects
               </Button>
