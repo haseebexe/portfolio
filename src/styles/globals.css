@@ -197,21 +197,21 @@ html {
 }
 
 
-/* NProgress bar */
+/* Top loading bar for dark theme */
 #nprogress .bar {
-  height: 3px; /* slightly thicker for visibility */
+  height: 2px; /* more visible */
   background: linear-gradient(to right, #38bdf8, #3b82f6);
   box-shadow: 0 0 10px #38bdf8, 0 0 5px #3b82f6;
   z-index: 9999;
 }
 
-/* Optional: fade peg for smoother effect */
+/* Optional: smoother peg */
 #nprogress .peg {
   box-shadow: 0 0 10px #38bdf8, 0 0 5px #3b82f6;
   opacity: 1 !important;
 }
 
-/* Hide the spinner */
+/* Hide spinner */
 #nprogress .spinner {
   display: none !important;
 }

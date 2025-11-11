@@ -3,12 +3,12 @@ import { useLocation } from "react-router-dom";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 
-// Configure NProgress for smooth, gradient-style loading
+// Configure NProgress for smooth visual effect
 NProgress.configure({
-  showSpinner: false, // remove the spinner
-  speed: 700,         // slower, smooth completion
-  minimum: 0.1,       // start visible
-  trickleRate: 0.02,  // gradual progress
+  showSpinner: false,
+  speed: 700,         // smooth finish
+  minimum: 0.2,       // start visibly
+  trickleRate: 0.02,  // gradual movement
   trickleSpeed: 200,  // interval in ms
 });
 
@@ -16,17 +16,17 @@ export const LoadingBar = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    NProgress.start();       // start the bar
-    window.scrollTo(0, 0);   // reset scroll
+    NProgress.start(); // start animation
+    window.scrollTo(0, 0); // reset scroll
 
-    // simulate a natural delay for the bar to feel smooth
+    // aesthetic delay, then finish
     const timer = setTimeout(() => {
       NProgress.done();
-    }, 500);
+    }, 400); // short delay for smoothness
 
     return () => {
       clearTimeout(timer);
-      NProgress.done();       // ensure cleanup if unmounting
+      NProgress.done();
     };
   }, [pathname]);
 
