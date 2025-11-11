@@ -132,7 +132,7 @@ export function AboutPage() {
                 <div className="relative w-48 h-48 mx-auto">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-2xl blur-xl opacity-30"></div>
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjE4NDU3MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                    src="/images/MuhammadHaseeb.jpg"
                     alt="Muhammad Haseeb"
                     className="relative w-full h-full rounded-2xl object-cover border-2 border-[#38bdf8]/30"
                   />

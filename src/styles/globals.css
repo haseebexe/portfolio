@@ -196,6 +196,29 @@ html {
   aspect-ratio: 16 / 8;
 }
 
+
+/* NProgress bar */
+#nprogress .bar {
+  height: 3px; /* slightly thicker for visibility */
+  background: linear-gradient(to right, #38bdf8, #3b82f6);
+  box-shadow: 0 0 10px #38bdf8, 0 0 5px #3b82f6;
+  z-index: 9999;
+}
+
+/* Optional: fade peg for smoother effect */
+#nprogress .peg {
+  box-shadow: 0 0 10px #38bdf8, 0 0 5px #3b82f6;
+  opacity: 1 !important;
+}
+
+/* Hide the spinner */
+#nprogress .spinner {
+  display: none !important;
+}
+
+
+
+
 @media (min-width:1200px) {
   .brandLogo{
   max-width: 120px;
