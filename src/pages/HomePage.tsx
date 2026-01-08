@@ -10,6 +10,7 @@ import kipsHome from '/public/images/publicationsHome.png';
 export function HomePage() {
   const skills = [
     { icon: Code, name: "React.js", color: "#38bdf8" },
+     { icon: Code, name: "Next.js", color: "#38bdf8" },
     { icon: Palette, name: "HTML/CSS", color: "#38bdf8" },
     { icon: Zap, name: "JavaScript", color: "#38bdf8" },
     { icon: Layers, name: "WordPress", color: "#38bdf8" },

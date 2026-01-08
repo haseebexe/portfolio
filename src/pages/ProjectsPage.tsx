@@ -38,10 +38,10 @@ export function ProjectsPage() {
       title: "Kips Publications",
       description:
         "A major education-publisher in Pakistan providing study notes, exam prep books, and academic materials.",
-      techStack: ["React.js", "JavaScript"],
+      techStack: ["Next.js", "JavaScript"],
       liveUrl: "https://kipspublications.com/",
       image: kipsHome,
-      category: "React",
+      category: "Next",
     },
     {
       title: "Kips Prep",

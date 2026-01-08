@@ -102,7 +102,7 @@ export function AboutPage() {
     { name: "WordPress", category: "CMS" },
     { name: "Git/GitHub", category: "Tools" },
     { name: "Figma", category: "Design" },
-    { name: "REST APIs", category: "Backend" },
+    // { name: "REST APIs", category: "Backend" },
     { name: "Responsive Design", category: "Design" },
   ];
 
