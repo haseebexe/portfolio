@@ -1,19 +1,20 @@
 import { useState } from "react";
 import { ProjectCard } from "../components/ProjectCard";
 import { Button } from "../components/ui/button";
-import alamBibi from "/public/images/alamBibiHome.png";
-import demoStore from "/public/images/demo_home.png";
-import kipsHome from "/public/images/publicationsHome.png";
-import qbfnHome from "/public/images/qbfnHome.png";
-import collegeHome from "/public/images/collegeHome.png";
-import sevenCsHome from "/public/images/7csHome.png";
-import learnigoHome from "/public/images/learnigoHome.png";
-import prepHome from "/public/images/prepHome.png";
+const alamBibi = "/images/alamBibiHome.png";
+const demoStore = "/images/demo_home.png";
+const kipsHome = "/images/publicationsHome.png";
+const qbfnHome = "/images/qbfnHome.png";
+const collegeHome = "/images/collegeHome.png";
+const sevenCsHome = "/images/7csHome.png";
+const learnigoHome = "/images/learnigoHome.png";
+const prepHome = "/images/prepHome.png";
+const estore = "/images/estore1.png";
 
 export function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filters = ["All", "React", "Next", "WordPress"];
+  const filters = ["All", "MERN" , "React", "Next", "WordPress"];
 
   const projects = [
     {
@@ -25,16 +26,7 @@ export function ProjectsPage() {
       image: alamBibi,
       category: "Next",
     },
-    {
-      title: "Demo Store",
-      description:
-        "A modern demo e-commerce storefront showcasing UI, responsiveness and front-end work.",
-      techStack: ["React.js", "JavaScript"],
-      liveUrl: "https://haseebcode.online/",
-      image: demoStore,
-      category: "React",
-    },
-    {
+       {
       title: "Kips Publications",
       description:
         "A major education-publisher in Pakistan providing study notes, exam prep books, and academic materials.",
@@ -43,6 +35,25 @@ export function ProjectsPage() {
       image: kipsHome,
       category: "Next",
     },
+     {
+      title: "E-Store",
+      description:
+        "MERN e-commerce app with auth, cart, and product management. REST API powered and scalable.",
+      techStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
+      liveUrl: "https://e-store-psi-swart.vercel.app/",
+      image: estore,
+      category: "MERN",
+    },
+    {
+      title: "Demo Store",
+      description:
+        "A modern demo e-commerce storefront showcasing UI, responsiveness and front-end work.",
+      techStack: ["React.js", "JavaScript"],
+      liveUrl: "https://demo-store-phi-one.vercel.app/",
+      image: demoStore,
+      category: "React",
+    },
+ 
     {
       title: "Kips Prep",
       description: "lorem impsum dolor sit amet lorem impsum dolor sit amet",

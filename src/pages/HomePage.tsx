@@ -3,17 +3,20 @@ import { Button } from "../components/ui/button";
 import { ProjectCard } from "../components/ProjectCard";
 import { Code, Palette, Zap, Layers, Github, Linkedin } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import alamBibi from '/public/images/alamBibiHome.png';
-import demoStore from '/public/images/demo_home.png';
-import kipsHome from '/public/images/publicationsHome.png';
+const alamBibi = "/images/alamBibiHome.png";
+const kipsHome = "/images/publicationsHome.png";
+const estore = "/images/estore1.png";
 
 export function HomePage() {
   const skills = [
     { icon: Code, name: "React.js", color: "#38bdf8" },
-     { icon: Code, name: "Next.js", color: "#38bdf8" },
-    { icon: Palette, name: "HTML/CSS", color: "#38bdf8" },
-    { icon: Zap, name: "JavaScript", color: "#38bdf8" },
-    { icon: Layers, name: "WordPress", color: "#38bdf8" },
+    { icon: Code, name: "Node.js", color: "#38bdf8" },
+    { icon: Palette, name: "Express.js", color: "#38bdf8" },
+    { icon: Zap, name: "MongoDB", color: "#38bdf8" },
+    { icon: Layers, name: "Next.js", color: "#38bdf8" },
+    { icon: Layers, name: "JavaScript (ES6+)", color: "#38bdf8" },
+    { icon: Layers, name: "HTML5/CSS3", color: "#38bdf8" },
+    { icon: Layers, name: "REST APIs", color: "#38bdf8" },
   ];
 
   const featuredProjects = [
@@ -26,21 +29,30 @@ export function HomePage() {
       image: alamBibi,
     },
     {
-      title: "Demo Store",
-      description:
-        "A modern demo e-commerce storefront showcasing UI, responsiveness and front-end work.",
-      techStack: ["React.js", "JavaScript" ],
-      liveUrl: "https://haseebcode.online/",
-      image: demoStore,
-    },
-    {
       title: "Kips Publications",
       description:
         "A major education-publisher in Pakistan providing study notes, exam prep books, and academic materials.",
-      techStack: ["React.js", "JavaScript"],
+      techStack: ["Next.js", "JavaScript"],
       liveUrl: "https://kipspublications.com/",
-      image: kipsHome ,
+      image: kipsHome,
     },
+    {
+      title: "E-Store",
+      description:
+        "MERN e-commerce app with auth, cart, and product management. REST API powered and scalable.",
+      techStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
+      liveUrl: "https://e-store-psi-swart.vercel.app/",
+      image: estore,
+    },
+
+    // {
+    //   title: "Demo Store",
+    //   description:
+    //     "A modern demo e-commerce storefront showcasing UI, responsiveness and front-end work.",
+    //   techStack: ["React.js", "JavaScript"],
+    //   liveUrl: "https://haseebcode.online/",
+    //   image: demoStore,
+    // },
   ];
 
   return (
@@ -62,15 +74,17 @@ export function HomePage() {
                 </span>
               </div>
               <h1 className="text-[#f8fafc] mb-6">
-                Frontend Developer
+                MERN Stack Developer
                 <br />
                 <span className="bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] bg-clip-text text-transparent">
-                  Bridging design and functionality
+                  Building scalable full-stack applications
                 </span>
               </h1>
               <p className="text-xl text-[#f8fafc]/70 mb-8">
-                Hi, I'm <span className="text-[#38bdf8]">Muhammad Haseeb</span>.
-              I craft exceptional digital experiences by transforming ideas into reality with modern frontend technologies.
+                Hi, I’m <span className="text-[#38bdf8]">Muhammad Haseeb</span>.
+                I build scalable and high-performance web applications using the
+                MERN stack, transforming ideas into full-stack solutions with
+                clean architecture and seamless user experiences.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <Link to="/projects">
@@ -115,8 +129,7 @@ export function HomePage() {
                 <p className="text-[#f8fafc]/70 text-sm">Years Experience</p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-[#38bdf8]/50 transition-all">
-                <div className="text-[#38bdf8] mb-2">
-                15+</div>
+                <div className="text-[#38bdf8] mb-2">15+</div>
                 <p className="text-[#f8fafc]/70 text-sm">Projects Completed</p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:border-[#38bdf8]/50 transition-all">
@@ -162,7 +175,7 @@ export function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
                     {/* Avatar */}
                     <ImageWithFallback
-                      src="/images/MuhammadHaseeb.jpg"
+                      src="/images/MuhammadHaseeb.png"
                       alt="Muhammad Haseeb"
                       className="relative w-32 h-32 rounded-full object-cover border-4 border-[#38bdf8]/30 shadow-2xl ring-4 ring-white/10"
                     />
@@ -173,15 +186,16 @@ export function HomePage() {
                   </div>
 
                   <h3 className="text-[#f8fafc] mb-2">Muhammad Haseeb</h3>
-                  <p className="text-[#38bdf8] mb-6">Frontend Developer</p>
+                  <p className="text-[#38bdf8] mb-6">MERN Stack Developer</p>
 
                   <p className="text-[#f8fafc]/70 max-w-2xl mx-auto mb-4 leading-relaxed">
-                    Frontend Engineer skilled in React.js, JavaScript (ES6+),
-                    HTML5, and CSS3, with hands-on experience building
-                    responsive, SPA-based web applications. Adept at translating
-                    UI/UX designs into scalable, highperformance interfaces and
-                    ensuring cross-browser consistency. Passionate about modern
-                    frontend workflows, clean code, and continuous learning.
+                    Full Stack Developer with 2+ years of experience building
+                    responsive and high-performance web applications using
+                    React.js, Next.js, and JavaScript (ES6+). Experienced in
+                    developing backend services with Node.js, Express.js, and
+                    MongoDB, including REST APIs, authentication, authorization,
+                    and CRUD operations. Focused on scalable architecture,
+                    performance optimization, and clean, maintainable code.
                   </p>
                 </div>
 
@@ -213,18 +227,18 @@ export function HomePage() {
                   </div>
                   <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 hover:border-[#38bdf8]/50 transition-all">
                     <Zap size={16} className="text-[#38bdf8]" />
-                    <span className="text-[#f8fafc] text-sm">
-                      Fast Performance
-                    </span>
+                    <span className="text-[#f8fafc] text-sm">REST APIs</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 hover:border-[#38bdf8]/50 transition-all">
                     <Palette size={16} className="text-[#38bdf8]" />
-                    <span className="text-[#f8fafc] text-sm">UI/UX Design</span>
+                    <span className="text-[#f8fafc] text-sm">
+                      JWT Authentication
+                    </span>
                   </div>
                   <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 hover:border-[#38bdf8]/50 transition-all">
                     <Layers size={16} className="text-[#38bdf8]" />
                     <span className="text-[#f8fafc] text-sm">
-                      Responsive Design
+                      Scalable Architecture
                     </span>
                   </div>
                 </div>

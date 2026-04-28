@@ -8,14 +8,27 @@ import {
 } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { CertificationCard } from "../components/CertificationCard";
-import metaLogo from "/public/images/meta.png";
-import educativeLogo from "/public/images/educative.jpeg";
-import educativeCertificate from "/public/images/educativeCertificate.png";
-import reactBasic from "/public/images/reactBasic.jpeg";
-import reactAdvanced from "/public/images/reactAdvanced.jpeg";
+const metaLogo = "/images/meta.png";
+const educativeLogo = "/images/educative.jpeg";
+const udemyLogo = "/images/udemyLogo.png";
+const educativeCertificate = "/images/educativeCertificate.png";
+const reactBasic = "/images/reactBasic.jpeg";
+const reactAdvanced = "/images/reactAdvanced.jpeg";
+const completeNode = "/images/CompleteNodeJSDeveloper.jpg";
 
 export function AboutPage() {
   const certifications = [
+       {
+      title: "Complete NodeJS Developer (GraphQL, MongoDB, + more)",
+      issuer: "Udemy",
+      date: "Apr 2026",
+      credentialId: "UC-dd697cfb-0ead-40f0-b190-8084215f764d",
+      verificationUrl:
+        "https://e2.udemymail.com/ls/click?upn=u001.TtzRjPf63yUg9yrAxgqE7735MMJ3LdrdgxmaXqQZmIfH2fm5FO408Q-2BrKd0K0qJIb1IBsLI7flQ1xK-2BLPvA7b5BJjG1oLqtnbjeZSHlbT5dxCdlfZNDLN1CrxH8khy9q6oqGUjFtgNZuFnpnEC4uKEzeyOIMSYgQ0ahyGthRk26vgxYJtSZ9dGznlNidYLBMP71O_6urTgv0RBCDMRu2j0v4YW83mtpomtPXCJZawqLa7ieRmKENcMqBjPUZVBTnIYroHlxTLSMW9kt1H9GJMkzNH611PncL8k3eCNHwWqEKXVsOF8zUKrphR5UnQzLODybPNhma1Tdd34dHvcLStcEhBlTbJqwYokt8r-2F3vKiFiOVFii3aM5Yn86nIItb1CUh2bBZCYTG9NCYdRouyQRRHjFgwmYW3gqcup9sBAYFhXdUjFH-2F9UMTv-2FCeWVasVhDbyghXIvlOhTSs8rMHT6ljOpS4THnaKXyVjQDEcDNIblVqUqRtes0ESR-2FQmadaZwpgtGI5DqTUEEccKC2rRbRN9077A-3D-3D",
+      logo: udemyLogo,
+      certificateImage: completeNode,
+      skills: ["HTML5", "CCS3", "Javascript"],
+    },
     {
       title: "Learn HTML, CSS, and JavaScript",
       issuer: "Educative",
@@ -47,32 +60,38 @@ export function AboutPage() {
         "https://www.coursera.org/account/accomplishments/verify/8WGVKKL6Z6BU",
       logo: metaLogo,
       certificateImage: reactAdvanced,
-      skills: ["React", "JavaScript", "Hooks", "Context API", "Routing", "Rest API" ],
+      skills: [
+        "React",
+        "JavaScript",
+        "Hooks",
+        "Context API",
+        "Routing",
+        "Rest API",
+      ],
     },
   ];
   const experience = [
     {
-      year: "2023 - Present",
+      year: "Nov 2023 - Present",
       title: "Frontend Developer",
       company: "Crunch Craft",
-      description:
-        "Leading frontend development for enterprise web applications using React and modern JavaScript. Architecting scalable solutions and mentoring junior developers.",
+      points: [
+        "Engineered and deployed responsive Single-Page Applications (SPAs) using React.js, JavaScript (ES6+), HTML5, and CSS3.",
+        "Developed and maintained server-rendered applications with Next.js, improving performance and SEO.",
+        "Architected reusable and scalable React components using Context API and Hooks.",
+        "Collaborated with UI/UX designers to build pixel-perfect interfaces from Figma designs.",
+        "Optimized performance and ensured cross-browser compatibility and accessibility.",
+        "Worked on WordPress custom themes and Advanced Custom Fields (ACF) for client projects.",
+      ],
       skills: [
         "React.js",
         "Next.js",
-        "TypeScript",
-        "Javascript",
-        "UI/UX",
-        "Wordpress",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "WordPress",
       ],
     },
-    // {
-    //   year: '2021 - 2023',
-    //   title: 'Frontend Developer',
-    //   company: 'Digital Agency',
-    //   description: 'Developed custom WordPress themes and React applications for various clients. Collaborated with designers and backend teams to deliver pixel-perfect implementations.',
-    //   skills: ['WordPress', 'React', 'Client Management'],
-    // },
   ];
 
   const education = [
@@ -91,21 +110,28 @@ export function AboutPage() {
   ];
 
   const tools = [
-    { name: "React.js", category: "Frontend" },
-    { name: "Next.js", category: "Frontend" },
-    { name: "TypeScript", category: "Language" },
-    { name: "JavaScript (ES6+)", category: "Language" },
-    { name: "HTML5", category: "Frontend" },
-    { name: "CSS3/SASS", category: "Frontend" },
-    { name: "Tailwind CSS", category: "Styling" },
-    { name: "Bootstrap", category: "Styling" },
-    { name: "WordPress", category: "CMS" },
-    { name: "Git/GitHub", category: "Tools" },
-    { name: "Figma", category: "Design" },
-    // { name: "REST APIs", category: "Backend" },
-    { name: "Responsive Design", category: "Design" },
-  ];
+  { name: "React.js", category: "Frontend" },
+  { name: "Next.js", category: "Frontend" },
 
+  { name: "Node.js", category: "Backend" },
+  { name: "Express.js", category: "Backend" },
+  { name: "MongoDB", category: "Database" },
+
+  { name: "JavaScript (ES6+)", category: "Language" },
+
+  { name: "HTML5", category: "Frontend" },
+  { name: "CSS3/SASS", category: "Frontend" },
+  { name: "Tailwind CSS", category: "Styling" },
+  { name: "Bootstrap", category: "Styling" },
+
+  { name: "REST APIs", category: "Backend" },
+  { name: "JWT Authentication", category: "Security" },
+
+  { name: "Git/GitHub", category: "Tools" },
+  { name: "Postman", category: "API Testing" },
+
+  { name: "WordPress", category: "CMS" },
+];
   const stats = [
     { icon: Code2, label: "Projects Completed", value: "15+" },
     { icon: Target, label: "Client Satisfaction", value: "100%" },
@@ -120,8 +146,8 @@ export function AboutPage() {
           <div className="text-center mb-12">
             <h1 className="text-[#f8fafc] mb-4">About Me</h1>
             <p className="text-[#f8fafc]/70 max-w-2xl mx-auto">
-              Passionate Frontend Developer crafting exceptional digital
-              experiences
+              Full Stack (MERN) Developer building scalable and modern web
+              applications
             </p>
           </div>
 
@@ -132,7 +158,7 @@ export function AboutPage() {
                 <div className="relative w-48 h-48 mx-auto">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#38bdf8] to-[#3b82f6] rounded-2xl blur-xl opacity-30"></div>
                   <ImageWithFallback
-                    src="/images/MuhammadHaseeb.jpg"
+                    src="/images/MuhammadHaseeb.png"
                     alt="Muhammad Haseeb"
                     className="relative w-full h-full rounded-2xl object-cover border-2 border-[#38bdf8]/30"
                   />
@@ -140,24 +166,28 @@ export function AboutPage() {
               </div>
               <div className="md:col-span-2">
                 <h2 className="text-[#f8fafc] mb-4">Muhammad Haseeb</h2>
+
                 <p className="text-[#f8fafc]/70 mb-4">
-                  I'm a Frontend Developer who loves turning ideas into clean,
-                  responsive, and functional web experiences. What started as
-                  curiosity about how websites work has now become something I
-                  truly enjoy doing every day.
+                  I'm a Full Stack (MERN) Developer who enjoys building clean,
+                  scalable, and user-friendly web applications. What started as
+                  curiosity about how websites work has grown into a passion for
+                  creating complete solutions from frontend to backend.
                 </p>
+
                 <p className="text-[#f8fafc]/70 mb-4">
-                  I work mainly with{" "}
-                  <span className="text-[#38bdf8]">React.js</span> and{" "}
-                  <span className="text-[#38bdf8]">Next.js</span>, building
-                  modern SPAs with a focus on performance and simplicity. I also
-                  create custom WordPress themes when projects call for it. I
-                  like keeping my code neat and my designs easy to use.
+                  I work with <span className="text-[#38bdf8]">React.js</span>{" "}
+                  and <span className="text-[#38bdf8]">Next.js</span> for modern
+                  interfaces, along with{" "}
+                  <span className="text-[#38bdf8]">Node.js</span>,{" "}
+                  <span className="text-[#38bdf8]">Express.js</span>, and{" "}
+                  <span className="text-[#38bdf8]">MongoDB</span> to build
+                  robust backend systems and REST APIs. I also have experience
+                  working with WordPress for custom themes when needed.
                 </p>
+
                 <p className="text-[#f8fafc]/70">
-                  Outside of work, I’m usually exploring new frontend tools,
-                  experimenting with design ideas, or helping other devs learn
-                  something new.
+                  Outside of work, I enjoy exploring new technologies, improving
+                  my development skills, and experimenting with new ideas.
                 </p>
               </div>
             </div>
@@ -212,7 +242,14 @@ export function AboutPage() {
                   <div className="flex-1">
                     <h3 className="text-[#f8fafc] mb-2">{job.title}</h3>
                     <div className="text-[#f8fafc]/60 mb-4">{job.company}</div>
-                    <p className="text-[#f8fafc]/70 mb-4">{job.description}</p>
+                    <ul className="text-[#f8fafc]/70 mb-4 space-y-2">
+                      {job.points.map((point, i) => (
+                        <li key={i} className="flex gap-2">
+                          <span className="text-[#38bdf8]">•</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
                     <div className="flex flex-wrap gap-2">
                       {job.skills.map((skill) => (
                         <span

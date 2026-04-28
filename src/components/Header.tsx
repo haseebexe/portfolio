@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import  Logo  from '/public/images/haseeb_logo.png';
+const logo = '/images/haseeb_logo.png';
 
 export function Header() {
   const location = useLocation();
@@ -22,7 +22,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group brandLogo">           
-            <img src={Logo} alt="" />
+            <img src={logo} alt="" />
           </Link>
 
           {/* Desktop Navigation */}
