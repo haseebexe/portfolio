@@ -49,7 +49,7 @@ export function ProjectsPage() {
       description:
         "A modern demo e-commerce storefront showcasing UI, responsiveness and front-end work.",
       techStack: ["React.js", "JavaScript"],
-      liveUrl: "https://demo-store-phi-one.vercel.app/",
+      liveUrl: "https://shop.haseebcode.online/",
       image: demoStore,
       category: "React",
     },
